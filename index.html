@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>مصنع المنشاوي لإعادة التدوير — ELMENSHAWY RECYCLING</title>
+<meta name="description" content="مصنع المنشاوي لإعادة تدوير البلاستيك. تحت إدارة الحاج صديق طه المنشاوي. خامات بلاستيكية معاد تدويرها بمواصفات صناعية. تأسس 2010." />
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="canonical" href="https://almenshawy.net/">
+<meta property="og:title" content="مصنع المنشاوي لإعادة التدوير">
+<meta property="og:description" content="خامات بلاستيكية معاد تدويرها بمواصفات صناعية. PET / HDPE / LDPE / PP">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://almenshawy.net/">
+<meta property="og:locale" content="ar_EG">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #0a1410;
+    --bg-2: #0f1b16;
+    --surface: #15231c;
+    --line: #233028;
+    --line-2: #35463b;
+    --steel: #8a9992;
+    --steel-light: #c4d0ca;
+    --ink: #f4f6f3;
+    --ink-dim: #a8b0ab;
+    --accent: #00c853;        /* bright brand green */
+    --accent-deep: #008E44;   /* logo green */
+    --accent-dark: #006d35;
+    --safety: #ff6a13;
+    --warn: #ffb800;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+    overflow-x: hidden;
+    font-weight: 400;
+  }
+
+  /* grain overlay */
+  body::before{
+    content:"";
+    position: fixed; inset: 0;
+    pointer-events:none;
+    z-index: 1;
+    opacity:.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  .display{
+    font-family: 'IBM Plex Sans Arabic', 'Inter', sans-serif;
+    letter-spacing: -0.01em;
+    font-weight: 700;
+  }
+  .mono{ font-family: 'JetBrains Mono', monospace; }
+
+  a{ color: inherit; text-decoration: none; }
+
+  /* ========== TOP TICKER ========== */
+  .ticker{
+    background: var(--accent);
+    color: #0a0c0d;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 10px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #0a0c0d;
+    position: relative;
+    z-index: 5;
+  }
+  .ticker__track{
+    display: flex;
+    gap: 60px;
+    white-space: nowrap;
+    animation: ticker 40s linear infinite;
+    width: max-content;
+  }
+  .ticker__item::before{ content:"◆"; margin-left:60px; opacity:.7; }
+  @keyframes ticker {
+    from{ transform: translateX(0); }
+    to{ transform: translateX(50%); }
+  }
+
+  /* ========== NAV ========== */
+  nav{
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top:0;
+    z-index: 50;
+    backdrop-filter: blur(6px);
+  }
+  .nav-inner{
+    max-width: 1400px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 32px;
+    gap: 32px;
+  }
+  .brand{
+    display:flex; align-items:center; gap: 14px;
+    text-decoration: none;
+    color: inherit;
+  }
+  .brand__mark{
+    width: 110px; height: auto;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink: 0;
+  }
+  .brand__mark svg{
+    width: 100%; height: auto;
+    display: block;
+  }
+  .brand__mark svg path[fill="#008E44"],
+  .brand__mark svg path[fill="#00c853"]{
+    fill: var(--accent);
+  }
+  .brand__mark svg path[fill="white"]{
+    fill: var(--bg);
+  }
+  .brand__text{
+    line-height: 1.2;
+  }
+  .brand__ar{ font-family: 'IBM Plex Sans Arabic', sans-serif; font-weight: 700; font-size: 16px; }
+  .brand__en{
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .15em;
+    color: var(--ink-dim);
+  }
+
+  .nav-links{
+    display:flex; gap: 36px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .nav-links a{
+    position: relative;
+    padding: 6px 0;
+    transition: color .2s;
+  }
+  .nav-links a:hover{ color: var(--accent); }
+  .nav-links a::after{
+    content:""; position:absolute; bottom:0; right:0;
+    width: 0; height: 2px; background: var(--accent);
+    transition: width .25s ease;
+  }
+  .nav-links a:hover::after{ width: 100%; }
+
+  .nav-cta{
+    background: var(--accent);
+    color: #0a0c0d;
+    padding: 12px 22px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border: 1px solid #0a0c0d;
+    transition: transform .15s, box-shadow .15s;
+    cursor: pointer;
+  }
+  .nav-cta:hover{
+    transform: translate(-2px,-2px);
+    box-shadow: 4px 4px 0 var(--ink);
+  }
+
+  /* ========== HERO ========== */
+  .hero{
+    position: relative;
+    padding: 80px 32px 60px;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+  }
+  .hero-grid-bg{
+    position: absolute; inset:0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity:.4;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    pointer-events: none;
+  }
+  .hero-inner{
+    max-width: 1400px; margin: 0 auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 60px;
+    align-items: end;
+  }
+  .hero-meta{
+    display:flex; gap: 24px;
+    margin-bottom: 32px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--steel-light);
+    flex-wrap: wrap;
+  }
+  .hero-meta span{ display:flex; align-items:center; gap:8px; }
+  .hero-meta .dot{
+    width:8px; height:8px; background: var(--accent); border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:.4;} }
+
+  h1.hero-title{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: clamp(40px, 6vw, 80px);
+    line-height: 1.1;
+    letter-spacing: -.02em;
+    margin-bottom: 28px;
+  }
+  .hero-title .accent{ color: var(--accent); }
+  .hero-title .stroke{
+    -webkit-text-stroke: 2px var(--ink);
+    color: transparent;
+  }
+
+  .hero-subtitle{
+    font-size: 18px;
+    color: var(--steel-light);
+    max-width: 540px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+  }
+
+  .hero-cta-row{
+    display:flex; gap: 16px;
+    flex-wrap: wrap;
+  }
+  .btn-primary{
+    background: var(--accent);
+    color: #0a0c0d;
+    padding: 18px 32px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #0a0c0d;
+    cursor: pointer;
+    transition: all .15s;
+    display:inline-flex; align-items:center; gap: 12px;
+  }
+  .btn-primary:hover{
+    background: var(--ink);
+    transform: translate(-3px,-3px);
+    box-shadow: 5px 5px 0 var(--accent);
+  }
+  .btn-secondary{
+    background: transparent;
+    color: var(--ink);
+    padding: 18px 32px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid var(--line-2);
+    cursor: pointer;
+    transition: all .15s;
+    display:inline-flex; align-items:center; gap: 12px;
+  }
+  .btn-secondary:hover{ border-color: var(--accent); color: var(--accent); }
+
+  /* hero side info */
+  .hero-side{
+    border: 1px solid var(--line-2);
+    background: var(--surface);
+    padding: 32px;
+    position: relative;
+  }
+  .hero-side::before{
+    content: "خط الإنتاج · A1";
+    position: absolute;
+    top: -10px; right: 24px;
+    background: var(--bg);
+    color: var(--accent);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border: 1px solid var(--line-2);
+  }
+  .hero-stats{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 28px;
+  }
+  .stat-block{
+    border-right: 2px solid var(--accent);
+    padding-right: 14px;
+  }
+  .stat-block .num{
+    font-family: 'Inter', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+  .stat-block .label{
+    font-size: 12px;
+    color: var(--ink-dim);
+    margin-top: 8px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 500;
+  }
+  .director-card{
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .director-avatar{
+    width: 56px; height: 56px;
+    background: linear-gradient(135deg, var(--steel) 0%, var(--line-2) 100%);
+    border: 1px solid var(--accent);
+    display:flex; align-items:center; justify-content:center;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--accent);
+    flex-shrink:0;
+  }
+  .director-info .role{
+    font-size: 13px;
+    color: var(--ink-dim);
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  .director-info .name{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* ========== SECTION HEADERS ========== */
+  section{
+    padding: 100px 32px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .section-inner{ max-width: 1400px; margin: 0 auto; }
+  .section-tag{
+    display:inline-flex; align-items:center; gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .15em;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .section-tag::before{
+    content:""; width: 24px; height: 1px; background: var(--accent);
+  }
+  .section-title{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 4.5vw, 56px);
+    line-height: 1.15;
+    letter-spacing: -.02em;
+    margin-bottom: 24px;
+    max-width: 900px;
+  }
+  .section-lede{
+    font-size: 17px;
+    color: var(--steel-light);
+    max-width: 720px;
+    margin-bottom: 60px;
+    line-height: 1.8;
+  }
+
+  /* ========== CAPABILITIES ========== */
+  .capabilities-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border: 1px solid var(--line);
+  }
+  .cap-card{
+    padding: 36px 28px;
+    border-left: 1px solid var(--line);
+    background: var(--bg);
+    transition: background .25s;
+    position: relative;
+  }
+  .cap-card:last-child{ border-left: none; }
+  .cap-card:hover{ background: var(--surface); }
+  .cap-card:hover .cap-num{ color: var(--accent); }
+  .cap-num{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-dim);
+    margin-bottom: 32px;
+    letter-spacing: .1em;
+    transition: color .25s;
+  }
+  .cap-icon{
+    width: 56px; height: 56px;
+    margin-bottom: 24px;
+  }
+  .cap-icon svg{ width: 100%; height: 100%; }
+  .cap-title{
+    font-weight: 700;
+    font-size: 19px;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .cap-desc{
+    font-size: 15px;
+    color: var(--ink-dim);
+    line-height: 1.8;
+  }
+
+  /* ========== PROCESS ========== */
+  .process{
+    background: var(--bg-2);
+  }
+  .process-flow{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    margin-top: 40px;
+  }
+  .process-step{
+    padding: 32px 24px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    position: relative;
+    margin-left: -1px;
+  }
+  .process-step__num{
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .process-step__title{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .process-step__desc{
+    font-size: 14px;
+    color: var(--ink-dim);
+    line-height: 1.7;
+  }
+  .process-step__arrow{
+    position: absolute;
+    left: -10px; top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    color: var(--accent);
+    font-size: 20px;
+    z-index: 2;
+  }
+  .process-step:first-child .process-step__arrow{ display: none; }
+
+  /* ========== MATERIALS ========== */
+  .materials-layout{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: start;
+  }
+  .materials-list{
+    display: flex; flex-direction: column;
+    border-top: 1px solid var(--line);
+  }
+  .material-row{
+    display: grid;
+    grid-template-columns: 60px 1fr 100px;
+    gap: 20px;
+    align-items: center;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line);
+    cursor: pointer;
+    transition: padding .2s;
+  }
+  .material-row:hover{
+    padding-right: 16px;
+  }
+  .material-row:hover .material-code{
+    background: var(--accent); color: #0a0c0d;
+  }
+  .material-code{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: var(--surface);
+    border: 1px solid var(--line-2);
+    color: var(--accent);
+    text-align: center;
+    padding: 10px 0;
+    transition: all .2s;
+  }
+  .material-name-ar{
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+  .material-name-en{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-dim);
+    letter-spacing: .05em;
+  }
+  .material-status{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--accent);
+    text-align: left;
+  }
+  .material-status::before{
+    content:"●"; margin-left: 6px;
+  }
+
+  .materials-visual{
+    background: var(--surface);
+    border: 1px solid var(--line-2);
+    padding: 40px;
+    position: relative;
+    aspect-ratio: 4/5;
+    overflow: hidden;
+  }
+  .materials-visual__label{
+    position: absolute; top: 20px; right: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: .12em;
+  }
+  .materials-visual__big{
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(72px, 10vw, 160px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+    margin-top: auto;
+  }
+  .materials-visual__big span{ color: var(--accent); }
+  .materials-visual{
+    display:flex; flex-direction: column;
+    justify-content: space-between;
+  }
+  .materials-visual__caption{
+    font-size: 14px;
+    color: var(--ink-dim);
+    max-width: 90%;
+    margin-top: 24px;
+    line-height: 1.7;
+  }
+  /* hex pattern decoration */
+  .hex-pattern{
+    position: absolute;
+    top: 50px; left: -30px;
+    width: 200px;
+    opacity: .15;
+    pointer-events: none;
+  }
+
+  /* ========== FACTORY VISUAL ========== */
+  .factory-vis{
+    background: var(--bg-2);
+    padding: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .factory-banner{
+    height: 480px;
+    background:
+      linear-gradient(180deg, rgba(13,15,16,0) 0%, rgba(13,15,16,.95) 90%),
+      radial-gradient(circle at 30% 50%, rgba(201,255,58,.08) 0%, transparent 50%),
+      var(--bg-2);
+    position: relative;
+    overflow: hidden;
+    display: flex; align-items: end;
+    padding: 60px 32px;
+  }
+  .factory-banner__svg{
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+  }
+  .factory-banner__content{
+    position: relative; z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .factory-banner__title{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 4.5vw, 52px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+  }
+  .factory-banner__sub{
+    color: var(--ink-dim);
+    font-size: 16px;
+  }
+
+  /* ========== WHY US ========== */
+  .why-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .why-card{
+    padding: 36px 28px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--accent);
+    transition: transform .2s, border-color .2s;
+  }
+  .why-card:hover{
+    transform: translateY(-4px);
+    border-top-color: var(--safety);
+  }
+  .why-card__num{
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-dim);
+    margin-bottom: 16px;
+    letter-spacing: .15em;
+  }
+  .why-card__title{
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .why-card__desc{
+    font-size: 15px;
+    color: var(--ink-dim);
+    line-height: 1.8;
+  }
+
+  /* ========== STATS BAR ========== */
+  .big-stats{
+    background: var(--accent);
+    color: #0a0c0d;
+    padding: 80px 32px;
+    border-bottom: 1px solid #0a0c0d;
+    position: relative;
+    overflow: hidden;
+  }
+  .big-stats__inner{
+    max-width: 1400px; margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .big-stat{
+    border-right: 2px solid #0a0c0d;
+    padding-right: 20px;
+  }
+  .big-stat:first-child{ border-right: none; padding-right: 0;}
+  .big-stat__num{
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(48px, 6.5vw, 80px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
+  }
+  .big-stat__label{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  .big-stat__sub{
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 4px;
+    opacity: .55;
+    letter-spacing: 0.1em;
+  }
+
+  /* ========== CONTACT ========== */
+  .contact{
+    background: var(--bg);
+  }
+  .contact-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  .contact-form{
+    background: var(--surface);
+    border: 1px solid var(--line-2);
+    padding: 40px;
+  }
+  .field{
+    margin-bottom: 22px;
+  }
+  .field label{
+    display: block;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--steel-light);
+    margin-bottom: 8px;
+  }
+  .field input,
+  .field select,
+  .field textarea{
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--line-2);
+    color: var(--ink);
+    padding: 14px 16px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 15px;
+    transition: border-color .2s;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus{
+    outline: none;
+    border-color: var(--accent);
+  }
+  .field textarea{ resize: vertical; min-height: 100px; }
+  .form-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .submit-btn{
+    width: 100%;
+    background: var(--accent);
+    color: #0a0c0d;
+    padding: 18px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #0a0c0d;
+    cursor: pointer;
+    transition: all .15s;
+    margin-top: 8px;
+  }
+  .submit-btn:hover{
+    background: #0a0c0d; color: var(--accent);
+  }
+
+  .contact-info{
+    padding: 0;
+  }
+  .contact-info h3{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .contact-info p{
+    color: var(--steel-light);
+    margin-bottom: 32px;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+  .info-block{
+    border-top: 1px solid var(--line);
+    padding: 24px 0;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .info-block:last-child{ border-bottom: 1px solid var(--line); }
+  .info-block__label{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--ink-dim);
+    padding-top: 4px;
+  }
+  .info-block__value{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .info-block__value a:hover{ color: var(--accent); }
+
+  /* ========== FOOTER ========== */
+  footer{
+    background: #06080a;
+    padding: 60px 32px 30px;
+    border-top: 1px solid var(--line);
+  }
+  .foot-inner{
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .foot-top{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--line);
+  }
+  .foot-col h4{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  .foot-col ul{ list-style:none; }
+  .foot-col li{
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .foot-col a:hover{ color: var(--accent); }
+  .foot-brand{ max-width: 380px; }
+  .foot-brand p{
+    font-size: 14px;
+    color: var(--ink-dim);
+    line-height: 1.8;
+    margin-top: 16px;
+  }
+  .foot-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 13px;
+    color: var(--ink-dim);
+  }
+
+  /* ========== ANIMATIONS ========== */
+  .fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp .8s forwards;
+  }
+  @keyframes fadeUp{
+    to{ opacity: 1; transform: translateY(0); }
+  }
+  .delay-1{ animation-delay: .1s; }
+  .delay-2{ animation-delay: .25s; }
+  .delay-3{ animation-delay: .4s; }
+  .delay-4{ animation-delay: .55s; }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 980px){
+    .hero-inner{ grid-template-columns: 1fr; gap: 40px;}
+    .capabilities-grid{ grid-template-columns: repeat(2, 1fr);}
+    .cap-card{ border-left:none; border-bottom: 1px solid var(--line);}
+    .process-flow{ grid-template-columns: 1fr 1fr; }
+    .materials-layout{ grid-template-columns: 1fr;}
+    .why-grid{ grid-template-columns: 1fr; }
+    .big-stats__inner{ grid-template-columns: 1fr 1fr; gap: 30px; }
+    .big-stat{ border-right: none; }
+    .contact-layout{ grid-template-columns: 1fr;}
+    .nav-links{ display: none; }
+    .foot-top{ grid-template-columns: 1fr 1fr; gap: 30px;}
+    .form-row{ grid-template-columns: 1fr;}
+    section{ padding: 70px 24px;}
+    .hero{ padding: 60px 24px 50px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker__track">
+    <span class="ticker__item">إنتاج صناعي معتمد</span>
+    <span class="ticker__item">PET / HDPE / LDPE / PP</span>
+    <span class="ticker__item">طاقة استيعابية ٢٠٠ طن شهرياً</span>
+    <span class="ticker__item">شحن لجميع المحافظات</span>
+    <span class="ticker__item">شهادات جودة معتمدة</span>
+    <span class="ticker__item">إنتاج صناعي معتمد</span>
+    <span class="ticker__item">PET / HDPE / LDPE / PP</span>
+    <span class="ticker__item">طاقة استيعابية ٢٠٠ طن شهرياً</span>
+    <span class="ticker__item">شحن لجميع المحافظات</span>
+    <span class="ticker__item">شهادات جودة معتمدة</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#about" class="brand">
+      <div class="brand__mark">
+        <svg viewBox="0 0 904 417" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="مصنع المنشاوي">
+          <path d="M416.602 416.879L499.962 417C612.721 413.133 723.698 395.88 832.554 365.886C871.894 355.049 903.796 321.66 903.847 279.777L904 142.013C904.032 116.116 893.15 91.97 874.448 74.8769C861.827 63.3456 847.805 56.0701 831.325 51.2791C780.243 36.435 728.932 25.3242 676.01 16.8764C477.942 -14.7296 262.465 -1.58647 69.7011 53.2732C28.6102 64.9638 0.171983 100.208 0.127409 143.759L5.4585e-05 276.152C-0.0254163 299.928 8.86392 321.277 25.1016 338.606C34.3794 348.513 46.217 359.216 60.1878 363.172C176.475 396.103 295.303 413.056 416.608 416.879H416.602Z" fill="#f4f6f3"/>
+          <path d="M416.602 416.879C295.297 413.057 176.469 396.11 60.1814 363.173C46.2106 359.216 34.373 348.513 25.0952 338.606C8.87029 321.278 -0.0254163 299.929 5.45461e-05 276.153L0.127409 143.759C0.171983 100.208 28.6039 64.9641 69.6948 53.2735C262.465 -1.5862 477.942 -14.7293 676.01 16.883C728.932 25.3308 780.243 36.4416 831.325 51.2858C847.805 56.0767 861.827 63.3459 874.448 74.8835C893.15 91.9766 904.032 116.122 904 142.02L903.847 279.784C903.803 321.666 871.894 355.056 832.554 365.893C723.698 395.887 612.728 413.139 499.962 417.007L416.602 416.885V416.879ZM748.615 223.045C745.718 224.638 741.661 225.052 739.808 224.255C737.955 223.459 735.644 220.369 734.912 218.158L721.813 178.786C721.03 176.429 717.279 173.467 714.802 173.46L680.805 173.428C674.87 173.428 670.222 177.996 667.707 183.01L651.896 214.533C650.043 218.228 645.598 224.778 641.312 224.829L615.44 225.154L599.693 185.801C598.133 185.584 594.873 187.139 593.281 188.559L580.367 200.122C576.909 203.219 575.884 206.971 577.113 211.45L580.845 225.084L528.967 225.256C527.19 225.256 523.452 222.968 522.675 221.681L521.561 171.498L491.786 200.798C489.461 203.085 488.551 207.417 488.767 210.488L489.786 225.071C482.438 224.784 476.643 218.795 476.229 211.877L474.478 182.857L444.741 206.786L445.753 224.332C441.748 225.447 435.368 224.95 431.108 222.076C428.115 220.057 425.077 214.298 424.944 210.074L424.059 182.628L393.525 208.411L396.957 225.128L375.263 224.956C372.537 224.937 369.85 221.618 369.85 218.827L369.767 104.464C369.767 103.546 368.742 100.45 367.882 100.66C367.023 100.87 364.877 101.75 364.189 102.419L342.966 123.016C338.317 127.526 334.248 132.89 334.248 139.847L334.274 230.301C334.274 235.742 337.305 240.45 340.59 244.222L364.444 271.648C369.43 272.942 375.95 273.674 381.331 273.642L444.913 273.267C452.096 273.222 452.955 265.647 458.228 263.092L467.022 272.203C475.484 273.693 483.737 273.865 492.129 272.629L502.802 254.192L514.149 268.412C516.951 271.922 521.688 273.585 526.464 273.547L567.275 273.228C571.541 273.196 574.273 270.693 576.33 267.526L591.549 244.031L607.984 270.393C609.799 273.305 617.013 273.591 620.643 273.419L640.688 272.47L654.462 251.37L665.376 267.469C667.764 270.992 671.967 273.77 676.781 273.662L713.777 272.795L745.96 273.107C751.2 273.158 755.67 270.234 758.428 266.189L777.117 238.781C781.052 233.009 784.975 224.988 784.968 217.566L784.892 99.679C773.398 106.935 767.234 115.791 758.205 123.156C752.499 127.813 748.564 133.77 748.57 141.472L748.596 223.032L748.615 223.045ZM802.289 272.477L825.97 248.095C830.689 243.241 836.069 237.793 836.063 230.295L835.916 98.6024L803.798 126.851C800.238 129.985 797.837 135.076 796.513 140V270.954L798.468 273.821C798.901 274.458 801.754 273.037 802.289 272.483V272.477ZM475.624 127.526C477.687 125.424 476.968 120.474 475.312 118.779L461.825 104.986C459.82 102.935 455.139 101.979 453.019 104.241L435.247 123.162L454.273 142.052C455.929 143.695 461.711 141.708 463.22 140.172L475.637 127.533L475.624 127.526ZM442.251 170.045L452.567 158.629C454.681 156.291 455.534 152.303 453.121 149.875L439.634 136.299C436.647 133.292 432.228 134.063 429.426 136.93L416.194 150.474C414.8 151.901 414.048 156.66 415.468 158.055L431.509 173.785C434.737 176.952 440.194 172.326 442.251 170.045ZM483.635 173.575L499.166 157.762C500.159 156.163 499.834 151.028 498.274 149.461L484.641 135.751C481.96 133.056 476.236 134.305 474.701 137.433L461.055 151.226C459.355 152.94 460.062 156.902 461.704 158.565L476.764 173.721C478.133 174.078 482.189 174.002 483.641 173.575H483.635ZM582.748 173.626L598.483 157.871C599.553 155.692 598.929 151.608 597.14 149.85L584.048 137.051C580.775 133.846 575.464 133.782 572.223 137.019L557.252 151.959C556.074 153.131 556.609 156.749 557.889 158.011L573.643 173.524C575.827 174.55 580.412 174.543 582.748 173.62V173.626ZM95.5477 273.247L188.886 273.26C191.439 273.26 195.234 270.476 196.463 268.482L219.438 231.225C220.915 228.83 221.565 223.23 220.323 220.592C219.355 218.534 216.464 215.616 213.771 214.597L172.928 199.154L204.875 192.363L226.882 187.018L243.514 160.935C244.26 159.769 243.476 156.08 242.056 155.705L161.505 172.046C153.227 173.728 146.19 177.181 140.994 183.564C135.034 190.891 129.672 198.899 125.24 207.073C122.617 211.915 126.202 216.158 130.182 217.712L149.024 225.096L69.7202 225.676C67.0713 225.695 63.6964 229.556 63.0278 231.798C62.3592 234.041 62.7285 239.858 64.2695 241.801L83.9139 266.711C86.8876 270.483 89.7722 273.247 95.5605 273.247H95.5477ZM233.46 302.878C235.415 305.714 239.153 312.683 242.687 312.683L271.144 312.658C278.397 312.658 286.872 312.626 292.457 307L315.279 284.008C320.507 278.739 323.054 272.228 323.035 264.73L322.812 171.989C320.449 169.077 314.865 169.198 311.522 169.09C300.041 168.714 290.623 169.988 281.103 175.939L238.006 202.887C228.983 208.532 230.117 223.848 236.262 231.461C253.703 253.071 262.56 253.37 284.421 263.43C285.828 264.073 287.7 268.011 286.446 268.584L281.644 270.788L211.619 271.247L233.466 302.853L233.46 302.878ZM134.416 317.168L145.63 305.127C147.451 303.172 149.724 298.534 147.629 296.444L133.206 282.052C131.092 279.943 126.355 280.3 124.234 282.409L111.161 295.374C108.875 297.642 108.748 302.025 111.085 304.369L123.935 317.245C126.871 320.182 131.583 320.207 134.416 317.168ZM176.641 317.073L187.72 305.166C189.586 303.159 191.866 298.661 189.624 296.425L175.233 282.071C173.196 280.039 168.312 280.001 166.07 282.428L151.756 297.96C150.285 299.559 154.016 304.675 155.634 306.37L167.274 318.532C169.471 320.832 174.788 319.067 176.641 317.073Z" fill="#00c853"/>
+          <path d="M748.615 223.045L748.589 141.485C748.589 133.782 752.518 127.825 758.224 123.168C767.253 115.804 773.417 106.948 784.911 99.6917L784.987 217.579C784.987 225.001 781.071 233.022 777.136 238.794L758.446 266.201C755.689 270.247 751.213 273.171 745.978 273.12L713.796 272.808L676.8 273.674C671.986 273.789 667.783 271.005 665.395 267.482L654.481 251.382L640.707 272.483L620.662 273.432C617.032 273.604 609.818 273.317 608.003 270.406L591.568 244.043L576.349 267.539C574.292 270.712 571.56 273.209 567.294 273.241L526.483 273.56C521.707 273.598 516.97 271.935 514.168 268.425L502.821 254.205L492.148 272.642C483.756 273.878 475.503 273.706 467.04 272.215L458.247 263.105C452.968 265.66 452.114 273.235 444.932 273.279L381.35 273.655C375.969 273.687 369.449 272.954 364.463 271.661L340.609 244.234C337.33 240.463 334.299 235.755 334.293 230.314L334.267 139.86C334.267 132.903 338.336 127.539 342.985 123.028L364.208 102.431C364.896 101.762 367.035 100.889 367.901 100.673C368.767 100.456 369.786 103.559 369.786 104.476L369.869 218.84C369.869 221.63 372.556 224.95 375.282 224.969L396.976 225.141L393.544 208.424L424.077 182.641L424.963 210.086C425.096 214.31 428.134 220.07 431.126 222.089C435.386 224.962 441.767 225.459 445.772 224.344L444.76 206.799L474.497 182.87L476.248 211.889C476.668 218.808 482.457 224.797 489.805 225.083L488.786 210.5C488.57 207.43 489.487 203.098 491.805 200.81L521.58 171.511L522.694 221.694C523.471 222.981 527.209 225.275 528.986 225.268L580.863 225.096L577.132 211.462C575.903 206.984 576.928 203.231 580.386 200.135L593.3 188.572C594.892 187.145 598.152 185.597 599.712 185.813L615.459 225.166L641.331 224.841C645.617 224.79 650.062 218.241 651.915 214.546L667.726 183.023C670.241 178.015 674.889 173.435 680.824 173.441L714.821 173.473C717.298 173.473 721.049 176.442 721.832 178.799L734.931 218.171C735.663 220.382 738.044 223.51 739.827 224.268C741.61 225.026 745.743 224.644 748.634 223.057L748.615 223.045ZM713.382 224.013L692.209 208.353C689.325 206.219 683.326 206.633 680.544 208.971C678.538 210.653 677.723 215.425 678.493 218.814C679.066 221.337 683.174 224.415 686.599 224.364L713.382 224.013Z" fill="#f4f6f3"/>
+          <path d="M233.46 302.878L211.612 271.272L281.638 270.814L286.439 268.609C287.7 268.03 285.821 264.099 284.414 263.455C262.554 253.396 253.696 253.09 236.255 231.486C230.11 223.873 228.977 208.557 238 202.913L281.097 175.964C290.616 170.014 300.034 168.739 311.515 169.115C314.858 169.224 320.443 169.096 322.805 172.014L323.028 264.755C323.047 272.254 320.506 278.765 315.272 284.033L292.45 307.026C286.872 312.645 278.397 312.677 271.138 312.683L242.68 312.709C239.146 312.709 235.415 305.739 233.453 302.904L233.46 302.878ZM287.611 226.842L287.292 206.582L276.684 211.252C273.634 212.597 269.896 219.433 273.659 222.025C277.422 224.618 282.294 225.568 287.604 226.842L287.611 226.842Z" fill="#f4f6f3"/>
+          <path d="M802.288 272.477C801.747 273.031 798.901 274.452 798.468 273.814L796.519 270.948V139.994C797.837 135.069 800.238 129.979 803.798 126.844L835.916 98.5959L836.063 230.289C836.069 237.793 830.688 243.234 825.97 248.089L802.288 272.47V272.477Z" fill="#f4f6f3"/>
+          <path d="M582.748 173.626C580.411 174.55 575.827 174.556 573.642 173.53L557.889 158.017C556.609 156.756 556.08 153.143 557.252 151.965L572.222 137.025C575.47 133.789 580.774 133.852 584.047 137.057L597.139 149.856C598.935 151.608 599.553 155.692 598.483 157.877L582.748 173.632V173.626Z" fill="#f4f6f3"/>
+          <path d="M442.251 170.045C440.188 172.326 434.737 176.951 431.509 173.785L415.468 158.055C414.048 156.66 414.793 151.901 416.194 150.474L429.426 136.929C432.235 134.056 436.647 133.292 439.634 136.299L453.121 149.875C455.534 152.302 454.681 156.297 452.567 158.629L442.251 170.045Z" fill="#f4f6f3"/>
+          <path d="M475.624 127.526L463.207 140.166C461.698 141.701 455.916 143.689 454.261 142.045L435.234 123.156L453.006 104.234C455.133 101.973 459.813 102.928 461.813 104.98L475.3 118.773C476.955 120.467 477.675 125.417 475.612 127.52L475.624 127.526Z" fill="#f4f6f3"/>
+          <path d="M483.635 173.575C482.183 174.002 478.127 174.078 476.758 173.721L461.698 158.565C460.049 156.902 459.348 152.946 461.049 151.226L474.695 137.433C476.229 134.298 481.954 133.05 484.635 135.751L498.268 149.461C499.828 151.028 500.159 156.17 499.159 157.762L483.628 173.575H483.635Z" fill="#f4f6f3"/>
+          <path d="M713.382 224.013L686.6 224.364C683.174 224.408 679.067 221.337 678.494 218.815C677.729 215.432 678.545 210.66 680.544 208.972C683.327 206.627 689.325 206.213 692.21 208.354L713.382 224.013Z" fill="#00c853"/>
+          <path d="M287.611 226.842C282.3 225.561 277.378 224.574 273.666 222.019C269.953 219.464 273.64 212.59 276.69 211.246L287.299 206.576L287.617 226.835L287.611 226.842Z" fill="#00c853"/>
+        </svg>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">عن المصنع</a>
+      <a href="#capabilities">الإمكانيات</a>
+      <a href="#process">خط الإنتاج</a>
+      <a href="#materials">الخامات</a>
+      <a href="#contact">تواصل</a>
+    </div>
+    <a href="#contact" class="nav-cta">طلب عرض سعر ←</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="about">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-meta fade-in">
+        <span><span class="dot"></span> الخط الإنتاجي يعمل الآن</span>
+        <span>تأسس عام 2010</span>
+        <span>SHIFT 02</span>
+      </div>
+      <h1 class="hero-title fade-in delay-1">
+        خامة بلاستيك<br>
+        <span class="accent">معاد تدويرها</span><br>
+        <span class="stroke">بمواصفات صناعية.</span>
+      </h1>
+      <p class="hero-subtitle fade-in delay-2">
+        مصنع المنشاوي لإعادة تدوير البلاستيك يقوم بفرز ومعالجة وإنتاج خامات بوليمرية معاد تدويرها للمصانع والشركات الصناعية في مصر — بمواصفات تلتزم بمعايير الصناعة وثبات الجودة على مدار الدفعات.
+      </p>
+      <div class="hero-cta-row fade-in delay-3">
+        <a href="#contact" class="btn-primary">اطلب عرض سعر <span>→</span></a>
+        <a href="#capabilities" class="btn-secondary">شاهد الإمكانيات</a>
+      </div>
+    </div>
+
+    <aside class="hero-side fade-in delay-2">
+      <div class="hero-stats">
+        <div class="stat-block">
+          <div class="num">+15</div>
+          <div class="label">سنة خبرة</div>
+        </div>
+        <div class="stat-block">
+          <div class="num">200T</div>
+          <div class="label">طاقة شهرية</div>
+        </div>
+        <div class="stat-block">
+          <div class="num">04</div>
+          <div class="label">أنواع بوليمر</div>
+        </div>
+        <div class="stat-block">
+          <div class="num">99%</div>
+          <div class="label">نقاء الخامة</div>
+        </div>
+      </div>
+      <div class="director-card">
+        <div class="director-avatar">ص</div>
+        <div class="director-info">
+          <div class="role">تحت إدارة</div>
+          <div class="name">الحاج / صديق طه المنشاوي</div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section id="capabilities">
+  <div class="section-inner">
+    <div class="section-tag">الإمكانيات الصناعية</div>
+    <h2 class="section-title">من الفرز للحبيبة الصالحة للتصنيع.</h2>
+    <p class="section-lede">
+      نقدم خط إنتاج متكامل يبدأ من استلام البلاستيك المستهلك بكميات صناعية، مروراً بالغسيل والفرز اللوني، حتى إنتاج رقائق وحبيبات (Granules) جاهزة للحقن أو النفخ.
+    </p>
+
+    <div class="capabilities-grid">
+      <div class="cap-card">
+        <div class="cap-num">/01</div>
+        <div class="cap-icon">
+          <svg viewBox="0 0 56 56" fill="none">
+            <rect x="6" y="14" width="44" height="32" stroke="#00c853" stroke-width="2"/>
+            <path d="M6 22h44M14 14v-4M28 14v-4M42 14v-4" stroke="#00c853" stroke-width="2"/>
+            <circle cx="20" cy="34" r="3" fill="#00c853"/>
+            <circle cx="36" cy="34" r="3" fill="#00c853"/>
+          </svg>
+        </div>
+        <div class="cap-title">فرز آلي ويدوي</div>
+        <div class="cap-desc">فصل البلاستيك حسب النوع والكثافة واللون باستخدام معدات صناعية وفريق فني متخصص.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num">/02</div>
+        <div class="cap-icon">
+          <svg viewBox="0 0 56 56" fill="none">
+            <path d="M28 6c-8 0-14 6-14 14 0 6 4 10 8 14v8h12v-8c4-4 8-8 8-14 0-8-6-14-14-14z" stroke="#00c853" stroke-width="2"/>
+            <path d="M22 26c2 4 4 6 6 6s4-2 6-6" stroke="#00c853" stroke-width="2"/>
+            <path d="M22 46h12M24 50h8" stroke="#00c853" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="cap-title">غسيل صناعي</div>
+        <div class="cap-desc">منظومة غسيل بالماء الساخن والكاوية لإزالة الملوثات والشحوم والملصقات والأتربة.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num">/03</div>
+        <div class="cap-icon">
+          <svg viewBox="0 0 56 56" fill="none">
+            <path d="M10 38l8-22h20l8 22" stroke="#00c853" stroke-width="2"/>
+            <rect x="6" y="38" width="44" height="10" stroke="#00c853" stroke-width="2"/>
+            <path d="M20 28h16" stroke="#00c853" stroke-width="2"/>
+            <circle cx="28" cy="43" r="2" fill="#00c853"/>
+          </svg>
+        </div>
+        <div class="cap-title">طحن وتقطيع</div>
+        <div class="cap-desc">تكسير المواد إلى رقائق منتظمة الحجم (Flakes) بمواصفات تناسب التصنيع المباشر.</div>
+      </div>
+      <div class="cap-card">
+        <div class="cap-num">/04</div>
+        <div class="cap-icon">
+          <svg viewBox="0 0 56 56" fill="none">
+            <circle cx="18" cy="28" r="6" stroke="#00c853" stroke-width="2"/>
+            <circle cx="38" cy="28" r="6" stroke="#00c853" stroke-width="2"/>
+            <circle cx="28" cy="42" r="4" stroke="#00c853" stroke-width="2"/>
+            <circle cx="28" cy="14" r="4" stroke="#00c853" stroke-width="2"/>
+            <path d="M22 24l-8-6M34 24l8-6M28 36v-4" stroke="#00c853" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="cap-title">إنتاج الحبيبات</div>
+        <div class="cap-desc">صهر وبثق الحبيبات (Granules) بمواصفات اللزوجة والكثافة المطلوبة لخطوط الإنتاج.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-inner">
+    <div class="section-tag">خط الإنتاج · ٥ مراحل</div>
+    <h2 class="section-title">دورة إعادة التدوير الكاملة.</h2>
+    <p class="section-lede">
+      نلتزم بترتيب صارم من الاستلام للتسليم، مع نقاط فحص جودة في كل مرحلة. الهدف: خامة جاهزة، بدون مفاجآت في الدفعات.
+    </p>
+
+    <div class="process-flow">
+      <div class="process-step">
+        <div class="process-step__arrow">←</div>
+        <div class="process-step__num">01</div>
+        <div class="process-step__title">الاستلام والوزن</div>
+        <div class="process-step__desc">استلام البلاستيك المستهلك من الموردين، وزنه بميزان معتمد، وتسجيل دفعة الإنتاج.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__arrow">←</div>
+        <div class="process-step__num">02</div>
+        <div class="process-step__title">الفرز والتصنيف</div>
+        <div class="process-step__desc">فصل المواد حسب نوع البوليمر واللون والكثافة لضمان نقاء كل دفعة.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__arrow">←</div>
+        <div class="process-step__num">03</div>
+        <div class="process-step__title">الغسيل العميق</div>
+        <div class="process-step__desc">غسيل بالماء الساخن وإزالة الملصقات والملوثات العضوية والشحوم.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__arrow">←</div>
+        <div class="process-step__num">04</div>
+        <div class="process-step__title">الطحن والتجفيف</div>
+        <div class="process-step__desc">تكسير الخامة لرقائق منتظمة وتجفيفها تماماً قبل دخول مرحلة البثق.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step__arrow">←</div>
+        <div class="process-step__num">05</div>
+        <div class="process-step__title">البثق والتعبئة</div>
+        <div class="process-step__desc">إنتاج الحبيبات النهائية، فحصها، وتعبئتها في شكاير صناعية ٢٥ كيلو.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section id="materials">
+  <div class="section-inner">
+    <div class="section-tag">أنواع الخامات المنتجة</div>
+    <h2 class="section-title">بوليمرات بمواصفات صناعية ثابتة.</h2>
+
+    <div class="materials-layout">
+      <div>
+        <p class="section-lede" style="margin-bottom: 30px;">
+          ننتج ٤ أنواع رئيسية من البوليمرات المعاد تدويرها، كل نوع له استخدامه الصناعي. متاح بدفعات تبدأ من طن واحد.
+        </p>
+        <div class="materials-list">
+          <div class="material-row">
+            <div class="material-code">PET</div>
+            <div>
+              <div class="material-name-ar">بولي إيثيلين تيريفثاليت</div>
+              <div class="material-name-en">PET · ZJUJBJATES, FIBERS, FILM</div>
+            </div>
+            <div class="material-status">متوفر</div>
+          </div>
+          <div class="material-row">
+            <div class="material-code">HDPE</div>
+            <div>
+              <div class="material-name-ar">بولي إيثيلين عالي الكثافة</div>
+              <div class="material-name-en">HDPE · BOTTLES, CONTAINERS</div>
+            </div>
+            <div class="material-status">متوفر</div>
+          </div>
+          <div class="material-row">
+            <div class="material-code">LDPE</div>
+            <div>
+              <div class="material-name-ar">بولي إيثيلين منخفض الكثافة</div>
+              <div class="material-name-en">LDPE · BAGS, FILMS, WRAPPING</div>
+            </div>
+            <div class="material-status">متوفر</div>
+          </div>
+          <div class="material-row">
+            <div class="material-code">PP</div>
+            <div>
+              <div class="material-name-ar">بولي بروبيلين</div>
+              <div class="material-name-en">PP · CAPS, CRATES, AUTO-PARTS</div>
+            </div>
+            <div class="material-status">متوفر</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="materials-visual">
+        <div class="materials-visual__label">SPEC SHEET / 2026</div>
+        <svg class="hex-pattern" viewBox="0 0 200 300" fill="none">
+          <pattern id="hex" patternUnits="userSpaceOnUse" width="40" height="46">
+            <polygon points="20,1 39,12 39,34 20,45 1,34 1,12" stroke="#00c853" fill="none" stroke-width="1"/>
+          </pattern>
+          <rect width="200" height="300" fill="url(#hex)"/>
+        </svg>
+        <div>
+          <div class="materials-visual__big">99<span>.7%</span></div>
+          <div class="materials-visual__caption">
+            متوسط نسبة النقاء في الحبيبات المنتجة على مدار الدفعات الأخيرة. كل دفعة تخرج بشهادة فحص داخلي.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACTORY VISUAL BANNER -->
+<div class="factory-vis">
+  <div class="factory-banner">
+    <svg class="factory-banner__svg" viewBox="0 0 1400 480" preserveAspectRatio="xMidYMid slice" fill="none">
+      <!-- ground line -->
+      <line x1="0" y1="380" x2="1400" y2="380" stroke="#2a2e33" stroke-width="1"/>
+      <!-- factory silhouette -->
+      <g opacity="0.5">
+        <!-- main building -->
+        <rect x="180" y="220" width="280" height="160" stroke="#3a4047" stroke-width="1.5" fill="none"/>
+        <!-- sawtooth roof -->
+        <path d="M180 220 L220 180 L260 220 L300 180 L340 220 L380 180 L420 220 L460 180 L460 220" stroke="#3a4047" stroke-width="1.5" fill="none"/>
+        <!-- chimneys -->
+        <rect x="500" y="160" width="20" height="220" stroke="#3a4047" stroke-width="1.5"/>
+        <rect x="540" y="180" width="16" height="200" stroke="#3a4047" stroke-width="1.5"/>
+        <!-- silos -->
+        <ellipse cx="700" cy="200" rx="45" ry="8" stroke="#3a4047" stroke-width="1.5"/>
+        <line x1="655" y1="200" x2="655" y2="380" stroke="#3a4047" stroke-width="1.5"/>
+        <line x1="745" y1="200" x2="745" y2="380" stroke="#3a4047" stroke-width="1.5"/>
+        <ellipse cx="700" cy="380" rx="45" ry="8" stroke="#3a4047" stroke-width="1.5"/>
+        <ellipse cx="800" cy="220" rx="35" ry="6" stroke="#3a4047" stroke-width="1.5"/>
+        <line x1="765" y1="220" x2="765" y2="380" stroke="#3a4047" stroke-width="1.5"/>
+        <line x1="835" y1="220" x2="835" y2="380" stroke="#3a4047" stroke-width="1.5"/>
+        <!-- secondary building -->
+        <rect x="900" y="280" width="220" height="100" stroke="#3a4047" stroke-width="1.5" fill="none"/>
+        <path d="M900 280 L1010 240 L1120 280" stroke="#3a4047" stroke-width="1.5" fill="none"/>
+        <!-- tank -->
+        <rect x="1160" y="260" width="100" height="120" stroke="#3a4047" stroke-width="1.5"/>
+        <ellipse cx="1210" cy="260" rx="50" ry="8" stroke="#3a4047" stroke-width="1.5"/>
+        <!-- pipes -->
+        <line x1="460" y1="300" x2="500" y2="300" stroke="#3a4047" stroke-width="1.5"/>
+        <line x1="556" y1="280" x2="655" y2="280" stroke="#3a4047" stroke-width="1.5"/>
+        <line x1="745" y1="320" x2="900" y2="320" stroke="#3a4047" stroke-width="1.5"/>
+        <line x1="1120" y1="340" x2="1160" y2="340" stroke="#3a4047" stroke-width="1.5"/>
+      </g>
+
+      <!-- accent steam -->
+      <g opacity="0.4">
+        <circle cx="510" cy="140" r="20" fill="#00c853" filter="blur(20px)"/>
+        <circle cx="548" cy="160" r="15" fill="#00c853" filter="blur(15px)"/>
+      </g>
+
+      <!-- coordinate marks -->
+      <g fill="#00c853">
+        <text x="50" y="50" font-family="Inter, sans-serif" font-size="12" font-weight="600" letter-spacing="1">FACILITY 30.7°N · 30.0°E</text>
+        <text x="50" y="72" font-family="Inter, sans-serif" font-size="11" font-weight="500" letter-spacing="1" opacity="0.55">PROD-LINE / ACTIVE</text>
+      </g>
+      <g stroke="#00c853" opacity="0.6">
+        <line x1="40" y1="40" x2="40" y2="80"/>
+        <line x1="40" y1="40" x2="60" y2="40"/>
+      </g>
+    </svg>
+
+    <div class="factory-banner__content">
+      <div class="factory-banner__title">منشأة صناعية متكاملة.</div>
+      <div class="factory-banner__sub">خطوط إنتاج، صوامع تخزين، ومنطقة لوجستية لاستلام وشحن البضائع.</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY US -->
+<section>
+  <div class="section-inner">
+    <div class="section-tag">لماذا المنشاوي</div>
+    <h2 class="section-title">قيمة حقيقية للمصانع. ليس فقط خامة.</h2>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card__num">VALUE / 01</div>
+        <div class="why-card__title">ثبات الجودة على مدار الدفعات</div>
+        <div class="why-card__desc">
+          نظام فحص داخلي صارم في كل مرحلة، يضمن أن دفعة الشهر القادم تطابق دفعة هذا الشهر — بدون مفاجآت في خط إنتاجك.
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card__num">VALUE / 02</div>
+        <div class="why-card__title">سعر تنافسي مباشر من المنتج</div>
+        <div class="why-card__desc">
+          بدون وسطاء وبدون هوامش إضافية. الخامة تخرج من المصنع مباشرةً للعميل، بكميات صناعية وبأسعار تعكس ذلك.
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-card__num">VALUE / 03</div>
+        <div class="why-card__title">خبرة عائلية ١٥+ سنة</div>
+        <div class="why-card__desc">
+          تحت إدارة الحاج صديق طه المنشاوي، نمتلك سمعة بُنيت على الأمانة في الميزان والتسليم في الميعاد.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIG STATS -->
+<section class="big-stats">
+  <div class="big-stats__inner">
+    <div class="big-stat">
+      <div class="big-stat__num">200T</div>
+      <div class="big-stat__label">طاقة إنتاجية شهرية</div>
+      <div class="big-stat__sub">MONTHLY OUTPUT</div>
+    </div>
+    <div class="big-stat">
+      <div class="big-stat__num">15+</div>
+      <div class="big-stat__label">سنة في الصناعة</div>
+      <div class="big-stat__sub">YEARS IN INDUSTRY</div>
+    </div>
+    <div class="big-stat">
+      <div class="big-stat__num">04</div>
+      <div class="big-stat__label">أنواع بوليمر</div>
+      <div class="big-stat__sub">POLYMER GRADES</div>
+    </div>
+    <div class="big-stat">
+      <div class="big-stat__num">100%</div>
+      <div class="big-stat__label">شحن لكل المحافظات</div>
+      <div class="big-stat__sub">DELIVERY COVERAGE</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="section-tag">تواصل · طلب عرض سعر</div>
+    <h2 class="section-title">جاهز لطلبية صناعية؟</h2>
+
+    <div class="contact-layout" style="margin-top: 40px;">
+      <div class="contact-info">
+        <h3>كلمنا. الجواب في نفس اليوم.</h3>
+        <p>سواء كنت تطلب طن أو ٥٠ طن، فريقنا جاهز يجاوب على استفسارك بعرض سعر مفصّل ومواصفات الخامة المطلوبة.</p>
+
+        <div class="info-block">
+          <div class="info-block__label">EXECUTIVE</div>
+          <div class="info-block__value">الحاج / صديق طه المنشاوي<br><span style="color:var(--ink-dim); font-size:13px;">المدير العام</span></div>
+        </div>
+        <div class="info-block">
+          <div class="info-block__label">PHONE</div>
+          <div class="info-block__value"><a href="tel:+20100000000">+٢٠ ١٠٠ ٠٠٠ ٠٠٠٠</a></div>
+        </div>
+        <div class="info-block">
+          <div class="info-block__label">EMAIL</div>
+          <div class="info-block__value"><a href="mailto:info@almenshawy.net">info@almenshawy.net</a></div>
+        </div>
+        <div class="info-block">
+          <div class="info-block__label">FACILITY</div>
+          <div class="info-block__value">المنطقة الصناعية<br><span style="color:var(--ink-dim); font-size:13px;">جمهورية مصر العربية</span></div>
+        </div>
+        <div class="info-block">
+          <div class="info-block__label">HOURS</div>
+          <div class="info-block__value">السبت — الخميس<br><span style="color:var(--ink-dim); font-size:13px;">٨ صباحاً — ٥ مساءً</span></div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('تم استلام طلبك. سنتواصل معك قريباً.');">
+        <div class="field">
+          <label>اسم الشركة</label>
+          <input type="text" placeholder="مثال: شركة الصناعات البلاستيكية المتحدة" required>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label>الاسم</label>
+            <input type="text" placeholder="الاسم الكامل" required>
+          </div>
+          <div class="field">
+            <label>الوظيفة</label>
+            <input type="text" placeholder="مدير المشتريات">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label>التليفون</label>
+            <input type="tel" placeholder="010..." required>
+          </div>
+          <div class="field">
+            <label>البريد الإلكتروني</label>
+            <input type="email" placeholder="email@company.com" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label>نوع البوليمر المطلوب</label>
+            <select>
+              <option>PET</option>
+              <option>HDPE</option>
+              <option>LDPE</option>
+              <option>PP</option>
+              <option>متعدد</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>الكمية الشهرية (طن)</label>
+            <input type="text" placeholder="مثال: 10 طن">
+          </div>
+        </div>
+        <div class="field">
+          <label>تفاصيل إضافية</label>
+          <textarea placeholder="مواصفات خاصة، طريقة الشحن، استفسارات أخرى..."></textarea>
+        </div>
+        <button type="submit" class="submit-btn">إرسال طلب عرض السعر ←</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-top">
+      <div class="foot-col foot-brand">
+        <div class="brand" style="margin-bottom: 16px;">
+          <div class="brand__mark" style="width: 140px;">
+            <svg viewBox="0 0 904 417" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M416.602 416.879C295.297 413.057 176.469 396.11 60.1814 363.173C46.2106 359.216 34.373 348.513 25.0952 338.606C8.87029 321.278 -0.0254163 299.929 5.45461e-05 276.153L0.127409 143.759C0.171983 100.208 28.6039 64.9641 69.6948 53.2735C262.465 -1.5862 477.942 -14.7293 676.01 16.883C728.932 25.3308 780.243 36.4416 831.325 51.2858C847.805 56.0767 861.827 63.3459 874.448 74.8835C893.15 91.9766 904.032 116.122 904 142.02L903.847 279.784C903.803 321.666 871.894 355.056 832.554 365.893C723.698 395.887 612.728 413.139 499.962 417.007L416.602 416.885V416.879ZM748.615 223.045C745.718 224.638 741.661 225.052 739.808 224.255C737.955 223.459 735.644 220.369 734.912 218.158L721.813 178.786C721.03 176.429 717.279 173.467 714.802 173.46L680.805 173.428C674.87 173.428 670.222 177.996 667.707 183.01L651.896 214.533C650.043 218.228 645.598 224.778 641.312 224.829L615.44 225.154L599.693 185.801C598.133 185.584 594.873 187.139 593.281 188.559L580.367 200.122C576.909 203.219 575.884 206.971 577.113 211.45L580.845 225.084L528.967 225.256C527.19 225.256 523.452 222.968 522.675 221.681L521.561 171.498L491.786 200.798C489.461 203.085 488.551 207.417 488.767 210.488L489.786 225.071C482.438 224.784 476.643 218.795 476.229 211.877L474.478 182.857L444.741 206.786L445.753 224.332C441.748 225.447 435.368 224.95 431.108 222.076C428.115 220.057 425.077 214.298 424.944 210.074L424.059 182.628L393.525 208.411L396.957 225.128L375.263 224.956C372.537 224.937 369.85 221.618 369.85 218.827L369.767 104.464C369.767 103.546 368.742 100.45 367.882 100.66C367.023 100.87 364.877 101.75 364.189 102.419L342.966 123.016C338.317 127.526 334.248 132.89 334.248 139.847L334.274 230.301C334.274 235.742 337.305 240.45 340.59 244.222L364.444 271.648C369.43 272.942 375.95 273.674 381.331 273.642L444.913 273.267C452.096 273.222 452.955 265.647 458.228 263.092L467.022 272.203C475.484 273.693 483.737 273.865 492.129 272.629L502.802 254.192L514.149 268.412C516.951 271.922 521.688 273.585 526.464 273.547L567.275 273.228C571.541 273.196 574.273 270.693 576.33 267.526L591.549 244.031L607.984 270.393C609.799 273.305 617.013 273.591 620.643 273.419L640.688 272.47L654.462 251.37L665.376 267.469C667.764 270.992 671.967 273.77 676.781 273.662L713.777 272.795L745.96 273.107C751.2 273.158 755.67 270.234 758.428 266.189L777.117 238.781C781.052 233.009 784.975 224.988 784.968 217.566L784.892 99.679C773.398 106.935 767.234 115.791 758.205 123.156C752.499 127.813 748.564 133.77 748.57 141.472L748.596 223.032L748.615 223.045ZM802.289 272.477L825.97 248.095C830.689 243.241 836.069 237.793 836.063 230.295L835.916 98.6024L803.798 126.851C800.238 129.985 797.837 135.076 796.513 140V270.954L798.468 273.821C798.901 274.458 801.754 273.037 802.289 272.483V272.477ZM475.624 127.526C477.687 125.424 476.968 120.474 475.312 118.779L461.825 104.986C459.82 102.935 455.139 101.979 453.019 104.241L435.247 123.162L454.273 142.052C455.929 143.695 461.711 141.708 463.22 140.172L475.637 127.533L475.624 127.526ZM442.251 170.045L452.567 158.629C454.681 156.291 455.534 152.303 453.121 149.875L439.634 136.299C436.647 133.292 432.228 134.063 429.426 136.93L416.194 150.474C414.8 151.901 414.048 156.66 415.468 158.055L431.509 173.785C434.737 176.952 440.194 172.326 442.251 170.045ZM483.635 173.575L499.166 157.762C500.159 156.163 499.834 151.028 498.274 149.461L484.641 135.751C481.96 133.056 476.236 134.305 474.701 137.433L461.055 151.226C459.355 152.94 460.062 156.902 461.704 158.565L476.764 173.721C478.133 174.078 482.189 174.002 483.641 173.575H483.635ZM582.748 173.626L598.483 157.871C599.553 155.692 598.929 151.608 597.14 149.85L584.048 137.051C580.775 133.846 575.464 133.782 572.223 137.019L557.252 151.959C556.074 153.131 556.609 156.749 557.889 158.011L573.643 173.524C575.827 174.55 580.412 174.543 582.748 173.62V173.626ZM95.5477 273.247L188.886 273.26C191.439 273.26 195.234 270.476 196.463 268.482L219.438 231.225C220.915 228.83 221.565 223.23 220.323 220.592C219.355 218.534 216.464 215.616 213.771 214.597L172.928 199.154L204.875 192.363L226.882 187.018L243.514 160.935C244.26 159.769 243.476 156.08 242.056 155.705L161.505 172.046C153.227 173.728 146.19 177.181 140.994 183.564C135.034 190.891 129.672 198.899 125.24 207.073C122.617 211.915 126.202 216.158 130.182 217.712L149.024 225.096L69.7202 225.676C67.0713 225.695 63.6964 229.556 63.0278 231.798C62.3592 234.041 62.7285 239.858 64.2695 241.801L83.9139 266.711C86.8876 270.483 89.7722 273.247 95.5605 273.247H95.5477ZM233.46 302.878C235.415 305.714 239.153 312.683 242.687 312.683L271.144 312.658C278.397 312.658 286.872 312.626 292.457 307L315.279 284.008C320.507 278.739 323.054 272.228 323.035 264.73L322.812 171.989C320.449 169.077 314.865 169.198 311.522 169.09C300.041 168.714 290.623 169.988 281.103 175.939L238.006 202.887C228.983 208.532 230.117 223.848 236.262 231.461C253.703 253.071 262.56 253.37 284.421 263.43C285.828 264.073 287.7 268.011 286.446 268.584L281.644 270.788L211.619 271.247L233.466 302.853L233.46 302.878ZM134.416 317.168L145.63 305.127C147.451 303.172 149.724 298.534 147.629 296.444L133.206 282.052C131.092 279.943 126.355 280.3 124.234 282.409L111.161 295.374C108.875 297.642 108.748 302.025 111.085 304.369L123.935 317.245C126.871 320.182 131.583 320.207 134.416 317.168ZM176.641 317.073L187.72 305.166C189.586 303.159 191.866 298.661 189.624 296.425L175.233 282.071C173.196 280.039 168.312 280.001 166.07 282.428L151.756 297.96C150.285 299.559 154.016 304.675 155.634 306.37L167.274 318.532C169.471 320.832 174.788 319.067 176.641 317.073Z" fill="#00c853"/>
+            </svg>
+          </div>
+        </div>
+        <p>مصنع متخصص في إعادة تدوير البلاستيك بمصر منذ 2010. ننتج خامات بوليمرية معاد تدويرها بمواصفات صناعية للمصانع والشركات.</p>
+      </div>
+      <div class="foot-col">
+        <h4>المصنع</h4>
+        <ul>
+          <li><a href="#about">عن المصنع</a></li>
+          <li><a href="#capabilities">الإمكانيات</a></li>
+          <li><a href="#process">خط الإنتاج</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>المنتجات</h4>
+        <ul>
+          <li><a href="#materials">PET</a></li>
+          <li><a href="#materials">HDPE</a></li>
+          <li><a href="#materials">LDPE</a></li>
+          <li><a href="#materials">PP</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>تواصل</h4>
+        <ul>
+          <li><a href="#contact">طلب عرض سعر</a></li>
+          <li><a href="tel:+20100000000">+٢٠ ١٠٠ ٠٠٠ ٠٠٠٠</a></li>
+          <li><a href="mailto:info@almenshawy.net">البريد الإلكتروني</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 ELMENSHAWY RECYCLING · ALL RIGHTS RESERVED</div>
+      <div>إدارة: الحاج صديق طه المنشاوي</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
